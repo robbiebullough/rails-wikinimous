@@ -1,0 +1,8 @@
+<div class="container">
+<h1 class="mt-4 mb-4"><%= @article.title %></h1>
+<small>
+<%= link_to "✏️", edit_article_path(@article) %>
+<%= link_to "❌", article_path(@article), data:{turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this article?"} %>
+</small>
+<p class="card col-4 py-4 px-4"><%= @article.content %></p>
+</div>
